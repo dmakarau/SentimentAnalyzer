@@ -26,11 +26,11 @@ enum Sentiment: String, Plottable {
     var icon: String {
         switch self {
         case .positive:
-            return "smiley.fill"
+            return "hand.thumbsup.fill"
         case .negative:
-            return "frown.fill"
+            return "hand.thumbsdown.fill"
         case .neutral:
-            return "face.neutral.fill"
+            return "line.3.horizontal.decrease.circle.fill"
         }
     }
     

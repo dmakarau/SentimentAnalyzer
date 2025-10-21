@@ -12,6 +12,10 @@ struct Response: Identifiable {
     let text: String
     let score: Double
     
+    var sentiment: Sentiment {
+        Sentiment(score)
+    }
+    
     static let mockResponses: [String] = [
         "AI will definitely automate a lot of coding tasks, but developers will always be needed to guide and supervise it.",
         "Honestly, I think AI will replace many junior developer jobs within a few years.",

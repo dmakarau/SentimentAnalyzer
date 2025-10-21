@@ -8,7 +8,7 @@
 import Foundation
 import NaturalLanguage
 
-struct Score {
+struct Scorer {
     let tagger = NLTagger(tagSchemes: [.sentimentScore])
     
     func score(_ text: String) -> Double {
