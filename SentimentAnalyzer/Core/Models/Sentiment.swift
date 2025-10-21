@@ -8,11 +8,13 @@
 import Charts
 import SwiftUI
 
-enum Sentiment: String, Plottable {
+enum Sentiment: String, Plottable, CaseIterable, Identifiable {
     case positive = "Positive"
     case negative = "Negative"
     case neutral = "Neutral"
     
+    var id: String { rawValue }
+        
     init(_ score: Double) {
         if score > 0.25 {
             self = .positive
@@ -26,22 +28,33 @@ enum Sentiment: String, Plottable {
     var icon: String {
         switch self {
         case .positive:
-            return "hand.thumbsup.fill"
+            return "heart.fill"
         case .negative:
-            return "hand.thumbsdown.fill"
+            return "xmark.circle.fill"
         case .neutral:
-            return "line.3.horizontal.decrease.circle.fill"
+            return "minus.circle.fill"
         }
     }
     
     var sentimentColor: Color {
         switch self {
         case .positive:
-            return .green
+            return Color(red: 0.2, green: 0.7, blue: 0.3) // Modern emerald green
         case .negative:
-            return .red
+            return Color(red: 0.9, green: 0.3, blue: 0.3) // Modern coral red
         case .neutral:
-            return .gray
+            return Color(red: 0.5, green: 0.5, blue: 0.6) // Modern blue-gray
+        }
+    }
+    
+    var gradientColors: [Color] {
+        switch self {
+        case .positive:
+            return [Color(red: 0.2, green: 0.7, blue: 0.3), Color(red: 0.3, green: 0.8, blue: 0.4)]
+        case .negative:
+            return [Color(red: 0.9, green: 0.3, blue: 0.3), Color(red: 1.0, green: 0.4, blue: 0.4)]
+        case .neutral:
+            return [Color(red: 0.5, green: 0.5, blue: 0.6), Color(red: 0.6, green: 0.6, blue: 0.7)]
         }
     }
 }
