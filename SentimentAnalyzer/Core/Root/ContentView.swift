@@ -28,6 +28,9 @@ struct ContentView: View {
                 .ignoresSafeArea()
                 
                 VStack(spacing: 0) {
+                    // Custom Header
+                    customHeader
+                    
                     ScrollView {
                         LazyVStack(spacing: 20) {
                             ResponsePieChartView(responses: responses)
@@ -50,14 +53,51 @@ struct ContentView: View {
                     inputSection
                 }
             }
-            .navigationTitle("Sentiment Analyzer")
-            .navigationBarTitleDisplayMode(.large)
+            .navigationBarHidden(true)
         }
         .task {
             for response in Response.mockResponses {
                 saveResponse(response)
             }
         }
+    }
+    
+    private var customHeader: some View {
+        HStack {
+            Spacer()
+            
+            HStack(spacing: 8) {
+                // Custom Vibe Check Icon
+                ZStack {
+                    Circle()
+                        .fill(
+                            LinearGradient(
+                                gradient: Gradient(colors: [
+                                    Color(red: 0.4, green: 0.6, blue: 1.0),
+                                    Color(red: 0.6, green: 0.4, blue: 1.0)
+                                ]),
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
+                        .frame(width: 28, height: 28)
+                    
+                    Image(systemName: "waveform.path.ecg")
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundStyle(.white)
+                }
+                
+                Text("Vibe Check")
+                    .font(.title2)
+                    .fontWeight(.medium)
+                    .foregroundStyle(.primary)
+            }
+            
+            Spacer()
+        }
+        .padding(.top, 8)
+        .padding(.bottom, 12)
+        .background(.ultraThinMaterial)
     }
     
     private var responsesSection: some View {
