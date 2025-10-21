@@ -116,6 +116,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Denis Makarau**
 - GitHub: [@dmakarau](https://github.com/dmakarau)
+- **Technologies**: SwiftUI • iOS 16+ • Swift 5.9+ • Charts Framework • Xcode 15+
+- **Specialization**: Modern iOS development with data visualization
 
 ## 🙏 Acknowledgments
 
