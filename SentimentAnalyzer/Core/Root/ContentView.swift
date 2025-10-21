@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct ContentView: View {
     @State private var responseText = ""
@@ -16,7 +17,8 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 ScrollView {
-                    Text("Chart")
+                    ResponsePieChartView(responses: responses)
+                    
                     Text("Overview section")
                     
                     ForEach(responses) { response in
