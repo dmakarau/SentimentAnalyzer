@@ -1,6 +1,16 @@
-# 🧠 Sentiment Analyzer
+# 🧠 Vibe Check
 
 A modern iOS app that analyzes the emotional sentiment of text responses in real-time, providing beautiful visualizations and insights into your thoughts and feelings.
+
+<div align="left">
+  <img src="https://img.shields.io/badge/SWIFTUI-5.9+-007ACC?style=for-the-badge&logo=swift&logoColor=white" alt="SwiftUI 5.9+"/>
+  <img src="https://img.shields.io/badge/iOS-16.0+-000000?style=for-the-badge&logo=apple&logoColor=white" alt="iOS 16.0+"/>
+  <img src="https://img.shields.io/badge/SWIFT-5.9+-FA7343?style=for-the-badge&logo=swift&logoColor=white" alt="Swift 5.9+"/>
+  <img src="https://img.shields.io/badge/CHARTS-Framework-4FC3F7?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Charts Framework"/>
+  <img src="https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge" alt="License MIT"/>
+</div>
+
+<br/>
 
 ## 📱 Features
 
