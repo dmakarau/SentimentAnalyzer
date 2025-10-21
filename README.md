@@ -71,12 +71,12 @@ The app uses a custom scoring algorithm that:
 <div align="center">
 
 ### Main Dashboard
-<img src="https://github.com/dmakarau/SentimentAnalyzer/assets/screenshots/main-dashboard.png" width="300" alt="Main Dashboard with Pie Chart">
+<img src="screenshots/main-dashboard.png" width="300" alt="Main Dashboard with Pie Chart">
 
 *Interactive pie chart showing sentiment distribution with modern gradient design*
 
 ### Sentiment Analysis & Response List
-<img src="https://github.com/dmakarau/SentimentAnalyzer/assets/screenshots/sentiment-breakdown.png" width="300" alt="Sentiment Breakdown and Response List">
+<img src="screenshots/sentiment-breakdown.png" width="300" alt="Sentiment Breakdown and Response List">
 
 *Detailed sentiment breakdown with percentage pills and individual response analysis*
 
